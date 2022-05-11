@@ -239,7 +239,118 @@ h1{
 }
 
 
+/*Contato*/
+
+#contato {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 2.5rem;
+  height: 100vh;
+
+  padding-inline: 2rem;
+
+  padding-bottom: 10.6rem;
+}
+
+#contato #container_esquerdo {
+  padding-top: 4rem;
+}
+
+#contato #container_esquerdo iframe {
+  height: 35rem;
+  width: 100%;
+}
+
+#contato #container_direito {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+}
+
+#contato #container_direito form {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+  height: 35rem;
+}
+
+#contato #container_direito form input {
+  width: 100%;
+  font-size: 1.6rem;
+}
+
+#contato h1 {
+  padding-bottom: 2.5rem;
+}
+
+#contato #container_direito form textarea {
+  width: 100%;
+  font-size: 1.6rem;
+}
+
+#contato #container_direito form #button_form {
+  background-color: var(--secondary-color);
+  color: var(--background);
+
+  font-size: 1.6rem;
+
+  text-transform: uppercase;
+}
+
+/*Footer*/
+
+.footer {
+  background-color: var(--primary-color);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding-inline: 2rem;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100vw;
+  height: 7rem;
+}
+
+.footer .image img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.footer .redes_sociais{
+  display: flex;
+
+  gap: 1rem;
+}
+
+.footer .redes_sociais ion-icon{
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.footer .redes_sociais ion-icon:hover {
+  color: var(--secondary-color);
+}
+
+
+
+
  /*responsivo*/
+
 
  @media (min-width: 1024px){
   section h1{
@@ -279,4 +390,37 @@ h1{
   section#sobre #responsaveis-container #carrosel-largo {
     display: block;
   }
- }
+
+section#contato {
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    padding-inline: 6.5rem;
+    gap: 6.5rem;
+  }
+section#contato #container_direito {
+  padding-bottom: 0;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 50%;
+  }
+
+section#contato #container_esquerdo {
+    width: 50%;
+  }
+section#contato #container_esquerdo iframe {
+  width: 100%;
+  height: 36.1rem;
+  }   
+
+section#contato #container_direito form {
+  width: 100%;
+
+  height: 36.3rem;
+  }  
+
+}
