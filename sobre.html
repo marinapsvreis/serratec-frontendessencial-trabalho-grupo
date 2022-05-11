@@ -14,24 +14,36 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <nav id="nav-bar">
-      <a id="link-logo" href="./index.html"
-        ><img
-          src="./assets/imgs/serra-funko-icon.png"
-          alt="logo"
-          width="40px"
-        />
-        <p>Serra Funko</p>
-      </a>
-      <ul>
-        <a href="./catalogo.html"><li>Produtos</li></a>
-        <a href="./sobre.html"><li>Sobre</li></a>
-        <a href="#"><li>Contato</li></a>
-      </ul>
-    </nav>
-    <section id="sobre">
+    <section id="nav-bar">
+      <nav class="container">
+        <a id="link-logo" href="./index.html"
+          ><img
+            src="./assets/imgs/serra-funko-icon.png"
+            alt="logo"
+            width="40px"
+          />
+          <p>Serra Funko</p>
+        </a>
+        <ul>
+          <a href="./catalogo.html"><li>Produtos</li></a>
+          <a href="./sobre.html"><li>Sobre</li></a>
+          <a href="./contato.html"><li>Contato</li></a>
+        </ul>
+        <a href="#" id="menu-hamburguer">
+          <img
+            src="./assets/imgs/icons/menu-hamburguer.png"
+            alt="menu hamburguer"
+            width="40"
+          />
+        </a>
+      </nav>
+    </section>
+
+    <section id="sobre" class="container">
       <div id="sobre-container">
-        <h1>Sobre</h1>
+        <div class="row">
+          <h1>Sobre</h1>
+        </div>
         <p>
           Somos uma loja de bonecos colecionaveis e prezamos pela sua coleção,
           acessa paginas exclusivas pelo tema desejado e garanta já os seus
@@ -42,7 +54,9 @@
         </p>
       </div>
       <div id="responsaveis-container">
-        <h1>Responsáveis pela loja</h1>
+        <div class="row">
+          <h1>Responsáveis pela loja</h1>
+        </div>
         <div id="carrosel-largo">
           <div
             id="carouselExampleIndicators"
