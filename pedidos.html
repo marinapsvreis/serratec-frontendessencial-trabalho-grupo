@@ -12,51 +12,16 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./style.css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   </head>
   <body>
-    <section id="nav-bar">
-      <nav class="container">
-        <a id="link-logo" href="./index.html"
-          ><img
-            src="./assets/imgs/serra-funko-icon.png"
-            alt="logo"
-            width="40px"
-          />
-          <p>Serra Funko</p>
-        </a>
-        <ul>
-          <a href="./catalogo.html"><li>Produtos</li></a>
-          <a href="./sobre.html"><li>Sobre</li></a>
-          <a href="./contato.html"><li>Contato</li></a>
-          <a href="./login.html"><li>Login</li></a>
-        </ul>
+    <div id="nav-placeholder"></div>
 
-        <button
-          id="icon-menu"
-          class="navbar-toggler second-button shadow-none"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent23"
-          aria-controls="navbarSupportedContent23"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <div id="animated-icon2" class="animated-icon2">
-            <span></span><span></span><span></span><span></span>
-          </div>
-        </button>
-      </nav>
-    </section>
-
-    <div id="navMenu" class="">
-      <div id="menu-options">
-        <a class="menu-option" href="./index.html">Home</a>
-        <a class="menu-option" href="./catalogo.html">Produtos</a>
-        <a class="menu-option" href="./sobre.html">Sobre</a>
-        <a class="menu-option" href="./contato.html">Contato</a>
-        <a class="menu-option btn-login" href="./login.html">Login</a>
-      </div>
-    </div>
+    <script>
+      $(function () {
+        $('#nav-placeholder').load('./nav.html')
+      })
+    </script>
 
     <section id="pedidos" class="container">
       <div class="row">
