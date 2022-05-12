@@ -5,6 +5,7 @@
   --primary-color: #ff711e;
   --background: #1a1a1a;
   --secondary-color: #819cff;
+  --third-color: #456bf6;
 }
 
 * {
@@ -46,6 +47,26 @@ section#catalogo h1,
 section#sobre h1,
 section#contato h1 {
   text-shadow: 3px 3px 10px black;
+}
+
+/*Button Login*/
+
+#nav-bar .btn-login {
+  background-color: var(--secondary-color);
+  padding-inline: 1rem;
+  border-radius: 0.5rem;
+}
+
+#navMenu #menu-options .btn-login {
+  background-color: var(--secondary-color) !important;
+}
+
+#navMenu #menu-options .btn-login:hover {
+  background-color: var(--third-color) !important;
+}
+
+#home.container #buttons-home-linha2 :nth-child(2) {
+  background-color: var(--primary-color);
 }
 
 /*Menu Hamburguer*/
@@ -343,11 +364,7 @@ section#contato h1 {
   gap: 2rem;
 }
 
-#home.container #buttons-home-linha1 {
-  display: flex;
-  justify-content: center;
-}
-
+#home.container #buttons-home-linha1,
 #home.container #buttons-home-linha2 {
   display: flex;
   justify-content: center;
