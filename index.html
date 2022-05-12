@@ -29,15 +29,38 @@
           <a href="./sobre.html"><li>Sobre</li></a>
           <a href="./contato.html"><li>Contato</li></a>
         </ul>
-        <a href="#" id="menu-hamburguer">
+        <!-- <a href="#" id="menu-hamburguer">
           <img
             src="./assets/imgs/icons/menu-hamburguer.png"
             alt="menu hamburguer"
             width="40"
           />
-        </a>
+        </a> -->
+        <button
+          id="icon-menu"
+          class="navbar-toggler second-button shadow-none"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent23"
+          aria-controls="navbarSupportedContent23"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <div id="animated-icon2" class="animated-icon2">
+            <span></span><span></span><span></span><span></span>
+          </div>
+        </button>
       </nav>
     </section>
+
+    <div id="navMenu" class="">
+      <div id="menu-options">
+        <a class="menu-option" href="./index.html">Home</a>
+        <a class="menu-option" href="./catalogo.html">Produtos</a>
+        <a class="menu-option" href="./sobre.html">Sobre</a>
+        <a class="menu-option" href="./contato.html">Contato</a>
+      </div>
+    </div>
 
     <section id="home" class="container">
       <div class="row">
@@ -64,5 +87,7 @@
         </div>
       </div>
     </section>
+
+    <script src="./script.js"></script>
   </body>
 </html>

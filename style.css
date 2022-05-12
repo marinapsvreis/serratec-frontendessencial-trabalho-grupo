@@ -2,7 +2,7 @@
 
 :root {
   font-size: 62.5%;
-  --primary-color: #e30707;
+  --primary-color: #ff711e;
   --background: #1a1a1a;
   --secondary-color: #819cff;
 }
@@ -29,15 +29,159 @@ section h1 {
   width: 100vw;
 }
 
+section h3 {
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 3px 3px 10px black;
+}
+
 section#catalogo h1,
 section#sobre h1,
 section#contato h1 {
   margin-top: 5rem;
 }
 
-section h3 {
-  text-transform: uppercase;
-  text-align: center;
+section#home h1,
+section#catalogo h1,
+section#sobre h1,
+section#contato h1 {
+  text-shadow: 3px 3px 10px black;
+}
+
+/*Menu Hamburguer*/
+
+#navMenu {
+  position: fixed;
+  top: 5rem;
+  right: -102%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 3;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background);
+
+  transition: 0.5s;
+}
+
+#navMenu.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  top: 5rem;
+  right: 0%;
+
+  transition: 0.7s;
+}
+
+#navMenu #menu-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5rem;
+}
+
+#navMenu #menu-options .menu-option {
+  width: 70vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 3rem;
+  text-decoration: none;
+  color: var(--background);
+
+  background-color: var(--primary-color);
+  border-radius: 1rem;
+}
+
+#navMenu.active #menu-options .menu-option:hover {
+  background-color: var(--secondary-color);
+}
+
+.animated-icon2 span:nth-child(1) {
+  top: 0px;
+}
+
+.animated-icon2 span:nth-child(2),
+.animated-icon2 span:nth-child(3) {
+  top: 10px;
+}
+
+.animated-icon2 span:nth-child(4) {
+  top: 20px;
+}
+
+.animated-icon2.open span:nth-child(1) {
+  top: 11px;
+  width: 0%;
+  left: 50%;
+}
+
+.animated-icon2.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.animated-icon2.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.animated-icon2.open span:nth-child(4) {
+  top: 11px;
+  width: 0%;
+  left: 50%;
+}
+
+.animated-icon2 span {
+  background: var(--background);
+}
+
+.animated-icon2 {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  margin: 0px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.animated-icon2 span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 /*Navbar*/
@@ -68,13 +212,23 @@ section h3 {
   justify-content: center;
   gap: 0.5rem;
   text-decoration: none;
+
+  transition: 0.5s;
+}
+
+#nav-bar #link-logo:hover {
+  transform: scale(130%);
 }
 
 #nav-bar #link-logo p {
-  display: none;
+  display: block;
   color: var(--background);
   font-size: 1.8rem;
   margin-bottom: 0;
+}
+
+#nav-bar #link-logo p:hover {
+  text-shadow: 0px 0px 10px var(--secondary-color);
 }
 
 #nav-bar ul {
@@ -88,6 +242,13 @@ section h3 {
   font-size: 1.8rem;
   text-decoration: none;
   color: var(--background);
+
+  transition: 0.5s;
+}
+
+#nav-bar ul a:hover {
+  transform: scale(130%);
+  text-shadow: 0px 0px 10px var(--secondary-color);
 }
 
 /*Home*/
@@ -150,6 +311,18 @@ section h3 {
   gap: 2rem;
 }
 
+#home.container #buttons-home-linha1 a,
+#home.container #buttons-home-linha2 a {
+  transition: 0.5s;
+  box-shadow: 3px 3px 10px black;
+}
+
+#home.container #buttons-home-linha1 a:hover,
+#home.container #buttons-home-linha2 a:hover {
+  transform: scale(120%);
+  background-color: var(--primary-color);
+}
+
 /*Catalogo*/
 
 #catalogo.container {
@@ -169,10 +342,13 @@ section h3 {
   width: 26.7rem;
   height: 18.3rem;
   background-color: var(--secondary-color);
+
+  transition: 0.5s;
 }
 
 #catalogo.container #cards .card:hover {
   background-color: var(--primary-color);
+  transform: scale(110%);
 }
 
 #catalogo.container #cards .card img {
@@ -298,15 +474,17 @@ section h3 {
   margin-bottom: 5rem;
 }
 
+#contato #container_direito form #button_form:hover {
+  background-color: var(--primary-color);
+}
+
 /*Footer*/
 
 .footer {
   background-color: var(--primary-color);
 
   display: flex;
-
   align-items: center;
-  justify-content: space-between;
 
   padding-inline: 2rem;
 
@@ -317,30 +495,43 @@ section h3 {
   height: 7rem;
 }
 
-.footer .image img {
-  width: 5rem;
-  height: 5rem;
+footer .container {
+  display: flex;
+  justify-content: center;
 }
 
-.footer .redes_sociais {
+footer .container .redes_sociais {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .container .redes_sociais ul {
+  list-style: none;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 
   gap: 1rem;
+
+  margin-bottom: 0;
 }
 
-.footer .redes_sociais ion-icon {
-  width: 2.5rem;
-  height: 2.5rem;
+footer .container .redes_sociais ul img {
+  width: 3rem;
+  transition: 0.5s;
 }
-.footer .redes_sociais ion-icon:hover {
-  color: var(--secondary-color);
+
+footer .container .redes_sociais ul img:hover {
+  transform: scale(150%);
 }
 
 /*responsivo*/
 
 @media (min-width: 1024px) {
   section#nav-bar #link-logo p {
-    display: block;
     color: var(--background);
     font-size: 1.8rem;
     margin-bottom: 0;
@@ -352,7 +543,8 @@ section h3 {
     margin-bottom: 0;
   }
 
-  section#nav-bar .container #menu-hamburguer {
+  section#nav-bar .container #icon-menu,
+  section#nav-bar .container .menu-hamburguer {
     display: none;
   }
 
