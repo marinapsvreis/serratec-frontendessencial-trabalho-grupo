@@ -81,16 +81,31 @@
         </div>
         <div class="row">
           <form>
-            <input type="text" placeholder="Digite seu Nome" required />
-            <input type="email" placeholder="Digite seu Email" required />
+            <input
+              type="text"
+              placeholder="Digite seu Nome"
+              id="nome"
+              required
+            />
+            <input
+              type="email"
+              placeholder="Digite seu Email"
+              id="email"
+              required
+            />
             <textarea
               name="Digite Sua Mensagem"
-              id=""
+              id="mensagem"
               cols="30"
               rows="10"
               required
             ></textarea>
-            <input type="submit" value="Enviar" id="button_form" />
+            <input
+              type="submit"
+              value="Enviar"
+              id="button_form"
+              onclick="enviar()"
+            />
           </form>
         </div>
       </div>
