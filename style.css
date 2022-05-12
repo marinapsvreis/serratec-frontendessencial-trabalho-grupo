@@ -73,8 +73,10 @@ section#contato h1 {
 
 #navMenu {
   position: fixed;
-  top: 9rem;
+  top: 5rem;
   right: -102%;
+
+  padding-top: 4rem;
 
   display: flex;
   flex-direction: column;
@@ -93,8 +95,10 @@ section#contato h1 {
   flex-direction: column;
   align-items: center;
 
-  top: 9rem;
+  top: 5rem;
   right: 0%;
+
+  padding-top: 4rem;
 
   transition: 0.7s;
 }
