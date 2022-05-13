@@ -26,13 +26,13 @@ function enviar() {
   var email = document.getElementById('email').value
   var mensagem = document.getElementById('mensagem').value
 
-  if (nome !== '' && email !== '' && mensagem !== '') {
+  if (nome !== '' && email !== '' && mensagem !== '' && email.includes('@')) {
     console.log(`Nome: ${nome}`)
     console.log(`Email: ${email}`)
     console.log(`Mensagem: ${mensagem}`)
 
     alert('Mensagem enviada com sucesso!')
   } else {
-    alert('Preencha todos os campos do formulário!')
+    alert('Preencha todos os campos do formulário corretamente!')
   }
 }
